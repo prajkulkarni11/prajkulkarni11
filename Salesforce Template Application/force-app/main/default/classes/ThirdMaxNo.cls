@@ -1,33 +1,41 @@
-/*
-    Find the Third Max No from Array
- */
-public class ThirdMaxNo {
-    public void thirdMax(){
+/**
+* @description       : Find the Third Max No from Array
+* @author            : Swati Bhagat
+* @group             : 
+* @last modified on  : 02-08-2022
+* @last modified by  : Swati Bhagat
+**/
+
+    //Find the Third Max No from Array
+ 
+public with sharing class  ThirdMaxNo {
+    public Integer thirdMax(){
         integer[] arr= new integer[]{3,2,6,9,1};
             
             integer first=0;
             integer second=0;
         	integer third=0;
         
-        for(integer i=0; i<arr.size(); i++){
-            if(arr[i]>first)
+        for(integer count=0; count<arr.size(); count++){
+            if(arr[count]>first)
             {
                 third=second;
                 second=first;
-                first=arr[i];
+                first=arr[count];
             }
             
-            else if(arr[i]>second && arr[i]!=first)
+            else if(arr[count]>second && arr[count]!=first)
             {
-                second=arr[i];
+                second=arr[count];
             }
             
-            else if(arr[i]>third && arr[i]!=second)
+            else if(arr[count]>third && arr[count]!=second)
             {
-                third=arr[i];
+                third=arr[count];
             }
         }
         system.debug(third);
+        return null;
     }
 
 }
