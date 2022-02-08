@@ -1,0 +1,119 @@
+.position-fileuploader .slds-form-element__label{
+	font-size: 17px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+	color: rgb(62, 62, 60);
+	display: inline-block;
+}
+
+.closeBtnClass > lightning-primitive-icon > svg > use{
+    fill: rgb(255,255,255,1);
+}
+
+.slds-file-selector {
+    display: block !important;
+}
+
+.file-upload-section .slds-table_cell-buffer tr > td:last-child{
+	padding-right:0;
+}
+.file-upload-section.small-size .slds-file-selector__dropzone {
+	
+    display: flex !important;
+    justify-content: center !important;
+    align-content: center !important;
+    align-items: center !important;
+    margin: auto !important;
+    padding: 1rem !important;
+    max-height: 300px !important;
+	/*added by vishal*/
+	height:100px;
+}
+.file-upload-section.big-size .slds-file-selector__dropzone {
+	
+    display: flex !important;
+    justify-content: center !important;
+    align-content: center !important;
+    align-items: center !important;
+    margin: auto !important;
+    padding: 1rem !important;
+    max-height: 300px !important;
+	/*added by vishal*/
+	height:250px;
+}
+/*added by vishal*/ 
+ /* div[c-largefileuploader_largefileuploader] {  */
+	 /* text-align : center ;  */
+ /* }  */
+
+.file-upload-section.big-size .slds-form-element .slds-form-element__label{
+	position: absolute;
+    top: 46%;
+	min-width: 100%;
+    text-align: center;
+    /* left: 41%; */
+}
+.file-upload-section.small-size .slds-form-element .slds-form-element__label{
+	position: absolute;
+    top: 18%;
+	min-width: 100%;
+    text-align: center;
+    /* left: 41%; */
+}
+
+.file-upload-section .slds-form-element{
+	display: flex !important;
+    justify-content: center !important;
+	flex-direction: column;
+}
+.file-upload-section .slds-form-element .slds-form-element__control{
+	width : 100%;
+}
+
+slot[interop-primitiveFileDroppableZone_primitiveFileDroppableZone] {
+    display: inline-block !important;
+    width: 100% !important;
+	height:100%;
+}
+
+.file-upload-section.big-size .slds-file-selector_files .slds-file-selector__body {
+    display: block !important;
+    text-align: center !important;
+	/*added by vishal */
+	margin-top:140px;
+}
+.file-upload-section.small-size .slds-file-selector_files .slds-file-selector__body {
+    display: block !important;
+    text-align: center !important;
+	/*added by vishal */
+	margin-top:40px;
+}
+
+.slds-file-selector__button .slds-button .slds-button_neutral {
+    display: inline-flex !important;
+    align-items: center !important;
+    max-height: 2rem !important;
+    line-height: 2rem !important;
+}
+
+.slds-file-selector_files .slds-file-selector__text {
+    margin-top: .75rem !important;
+	/*added by vishal*/
+	display: inline !important;
+    margin-left: 11px;
+}
+
+.slds-file-selector__dropzone {
+    border: 0.5px dashed rgb(217, 219, 221) !important;
+}
+.slds-file-selector__dropzone.slds-has-drag-over{
+	outline: 0 !important;
+    border-color: #1589ee !important;
+    box-shadow: 0 0 3px #0070d2 !important;
+    border-style: solid !important;
+}
+
+.forceContentFileCard {
+    width: 12rem !important;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.40) !important;
+}

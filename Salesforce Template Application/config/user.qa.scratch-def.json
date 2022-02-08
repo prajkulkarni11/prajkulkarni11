@@ -1,0 +1,14 @@
+{
+    "Username": "Yogi.tester.1221@sfdx.org",
+    "LastName": "vyom",
+    "Email": "tester1221@sfdx.org",
+    "Alias": "Yogi.tester.122111",
+    "CommunityNickname" :"Yogi.tester.122111",
+    "TimeZoneSidKey": "America/Denver",
+    "LocaleSidKey": "en_US",
+    "EmailEncodingKey": "UTF-8",
+    "LanguageLocaleKey": "en_US",
+    "profileName": "System Administrator", 
+    "permsets": [],
+    "generatePassword": true
+}

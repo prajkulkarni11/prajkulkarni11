@@ -1,0 +1,6 @@
+
+SELECT  QualifiedApiName FROM FieldDefinition WHERE EntityDefinition.QualifiedApiName = 'Account' ;
+
+
+SELECT QualifiedApiName, Label, DeveloperName, Description, DataType, ExtraTypeInfo,  Length, 
+        Precision, Scale FROM FieldDefinition WHERE EntityDefinition.QualifiedApiName = 'Lead'

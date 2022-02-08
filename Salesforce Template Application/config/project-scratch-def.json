@@ -1,0 +1,24 @@
+{
+  "orgName": "VYOM Labs",
+  "edition": "Enterprise",
+  "features": ["EnableSetPasswordInApi","AuthorApex" ,"FieldAuditTrail" ,"DebugApex","DefaultWorkflowUser","ForceComPlatform",
+                "BigObjectsBulkAPI","LightningSalesConsole","LightningScheduler","PersonAccounts","Workflow",
+                "B2BCommerce","LightningServiceConsole","MarketingUser","HighVelocitySales","Communities",
+                "FlowSites","ProcessBuilder","RecordTypes","ServiceUser","Sites",
+                "EinsteinAnalyticsPlus","EinsteinBuilderFree","EinsteinRecommendationBuilder",
+                "InsightsPlatform","MultiCurrency","PlatformEncryption"
+              ],             
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    }
+    
+    
+  }
+}

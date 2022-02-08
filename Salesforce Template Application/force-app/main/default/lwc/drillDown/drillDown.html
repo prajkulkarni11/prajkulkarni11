@@ -1,0 +1,52 @@
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 01-29-2022
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+    <div class="slds-grid slds-grid_vertical">
+        <div class={data.style}> 
+            <div class="slds-grid clickable ">
+                 <div class="slds-col slds-order_2 slds-large-order_1">
+                    <div class="slds-grid slds-text-heading_medium slds-p-around_small" onclick={handleExpandCollapse}>
+                             <div>
+                                  <lightning-icon icon-name="utility:chevronright" size="small" variant="inverse" if:false={isExpanded}></lightning-icon>
+                                  <lightning-icon icon-name="utility:chevrondown" size="small" variant="inverse" if:true={isExpanded}></lightning-icon>
+                             </div>
+                             <!-- Title and Subtitle -->
+                             <div>
+                                 <span> {data.title}</span>
+                             </div>
+                             <div>
+                                 <span>{data.subTitle}</span>
+                             </div>
+
+                             </div>
+                  </div>
+             <!-- Actial Data to be Displayed -->
+             <div class="slds-col slds-order_1 slds-large-order_2 slds-p-around_small">
+                     <div class="slds-grid slds-grid_align-space slds-text-heading_small">
+                         <div class="slds-col">
+                                     {data.currencyCode} &nbsp;
+                                     <lightning-formatted-number value={data.current} maximum-fraction-digits={data.fractionDigits}></lightning-formatted-number>
+                         </div>
+                         <div class="slds-col">
+                                     {data.currencyCode} &nbsp;
+                                     <lightning-formatted-number value={data.previous} maximum-fraction-digits={data.fractionDigits}></lightning-formatted-number>
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+             <template for:each={data.children} for:item="child">
+                 <div key={child.Id} class="pink-child slds-m-horizontal_medium slds-m-bottom_x-small slds-p-around_small container"> 
+                     {child.title}
+                 </div>
+             </template>
+        </div>
+      <!-- Childrens -->
+       
+     </div>
+</template>

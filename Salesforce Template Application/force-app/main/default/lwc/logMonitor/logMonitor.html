@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 11-30-2021
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+    <div class="container">
+        <div class="slds-p-around_x-small slds-border_bottom slds-theme_shade">
+            <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+                <div>
+                    <span class="slds-badge">{logsAsTree.length}</span>
+                </div>
+                <div>
+                    <lightning-button-group>
+                        <lightning-button onclick={toggleMute} icon-name={muteIcon} label={muteLabel} variant="border-filled"></lightning-button>
+                        <lightning-button onclick={clearAll} icon-name="utility:delete" label="Clear all" variant="border-filled"></lightning-button>
+                    </lightning-button-group>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-container_fluid slds-scrollable_x content">
+            <lightning-tree-grid columns={logColumns} data={logsAsTree} key-field="index"  hide-checkbox-column="true"></lightning-tree-grid>
+        </div>
+    </div>
+</template>

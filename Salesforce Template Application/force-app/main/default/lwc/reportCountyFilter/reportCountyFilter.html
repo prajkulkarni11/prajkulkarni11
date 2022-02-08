@@ -1,0 +1,53 @@
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 01-10-2022
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col">
+            <div>
+
+                <div class="slds-grid">
+                    <div class="slds-col slds-order_1">
+                        <lightning-input type="checkbox" label="Basic option" checked variant='label-hidden'
+                            onchange={onAllCountries}>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-order_1">
+                        <span>{title}</span>
+                    </div>
+                    <div class="slds-col slds-order_3">
+                        <lightning-button-icon icon-name="utility:chevrondown" variant="bare" onclick={onCollapse}
+                            if:true={isExpanded}>
+                        </lightning-button-icon>
+                        <lightning-button-icon icon-name="utility:chevronleft" variant="bare" onclick={onExpand}
+                            if:false={isExpanded}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="slds-col">
+            <div class="slds-grid slds-p-horizontal_x-small" if:true={isExpanded}>
+
+                <div class="slds-col slds-order_1">
+
+                    <lightning-checkbox-group name="Checkbox Group" label="Checkbox Group" options={countyOptions}
+                        value={value} onchange={handleChange} variant='label-hidden'>
+                    </lightning-checkbox-group>
+
+                </div>
+                <div class="slds-col slds-order_2">
+                    <p>Selected Values are: {selectedValues}</p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</template>

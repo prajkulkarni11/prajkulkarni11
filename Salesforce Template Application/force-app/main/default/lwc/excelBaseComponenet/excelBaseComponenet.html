@@ -1,0 +1,151 @@
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 01-06-2022
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+    <lightning-card >
+        <div slot="title">
+                      <span class="">
+                            <lightning-icon icon-name="custom:custom16" size="large"></lightning-icon>
+                      </span>
+                     <span class="slds-text-heading_large"> {labels.title}   </span>
+                   
+        </div>
+        <!-- Action Buttons -->
+        <div slot="actions">
+
+                    <!-- ACTIVATED Process Button  -->
+                   
+                    <template if:true={isImportInProcess} >
+                                <lightning-button   variant="destructive" label={labels.stopImport}  
+                                                    onclick={handleStopProcess} 
+                                                    class="slds-m-left_x-small">
+                                </lightning-button>
+                    </template>
+
+                    <template if:false={isImportInProcess} >
+                            <template if:true={selectedObjectName} >
+                                <lightning-button   variant="brand" label={labels.import} title="Process Uploaded File " 
+                                                    onclick={handleProcess} 
+                                                    class="slds-m-left_x-small">
+                                </lightning-button>
+                            </template>
+                            <!-- DEACTIVATED Process Button  -->
+
+                            <template if:false={selectedObjectName} >
+                                        <lightning-button   variant="brand" label={labels.import} title="Process Uploaded File " 
+                                                            onclick={handleProcess} 
+                                                            class="slds-m-left_x-small" disabled>
+                                        </lightning-button>
+                            </template>
+                            
+                            <!-- Cancel button  Process Button  -->
+                            <template if:true={excelFile} >
+                                <lightning-button   variant="brand" label={labels.cancel} title="Cancel Process Uploaded File " 
+                                                    onclick={handleCancelProcess} 
+                                                    class="slds-m-left_x-small">
+                                </lightning-button>
+                            </template>
+                    </template>
+                           
+                
+        </div>
+        <!-- Main Body -->
+        <div class=" slds-box main-body">
+                    <div class="slds-box" if:true={isError}> 
+                            <template for:each={errors} for:item="error">
+                                <div key={error.id}>
+                                    <lightning-icon icon-name="utility:warning" alternative-text={error.variant}  variant={error.variant} size="x-small"></lightning-icon> 
+                                    <span class="slds-m-left_x-small "> {error.message} </span>
+                                </div>
+                            </template>
+                    </div>
+                 <!-- Loading Spinner -->
+                <div class="slds-p-horizontal_small" if:true={isProcessing}>
+                        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </div>
+                <!-- For Uploading File  -->
+                     
+                <div class="slds-box  custom-box" if:false={excelFile} > 
+                    <div class={fileUploadSectionClass} >
+                            <div class="position-fileuploader">
+
+                                <!--
+                                <div class="position-image">
+                                    <img src={fileUploadImage} class="image-size">
+                                </div> -->
+                                <div>
+                                    <lightning-input type="file" label="Upload excel File" accept=".xlsx,.xls" onchange={handleUploadFinished} class="modified-input" ></lightning-input>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            
+                <!-- Fost File Upload -->
+                <div class="excel-file-data" if:true={excelFile}>            
+                        <lightning-tabset  variant="scoped" active-tab-value={selectedWorksheet} >
+                            <template for:each={excelFile.worksheets} for:item="worksheet">
+                                <lightning-tab key={worksheet.id} value={worksheet.name} label={worksheet.name} onactive={handleOnSelectTab}>
+                                         <c-toast-message type="Warning" message={worksheet.error} if:true ={worksheet.error}> 
+
+                                         </c-toast-message>
+                                        <!-- Display Data in Datatable -->
+                                        <c-search-datagrid table-data={worksheet.dataRows} columns={worksheet.headers}>  
+                                    </c-search-datagrid>
+                                </lightning-tab>
+                            </template>
+                        </lightning-tabset>
+
+                </div>
+        </div>
+    </lightning-card>
+    <template if:true={isImportInProcess}>  
+        <div class="slds-modal slds-fade-in-open slds-backdrop">  
+          <div class="slds-modal__container">  
+            <!------HEADER Section-->  
+            <div class="slds-modal__header">  
+              <lightning-button-icon icon-name="utility:close" alternative-text="Close this window" size="large"  
+                variant="bare-inverse" onclick={closeModal} class="slds-modal__close">  
+              </lightning-button-icon>  
+              <div class="slds-text-heading_medium">
+                       <span>Import Progress </span>
+               </div>
+            </div>  
+            <!------Body Section-->  
+            <div class="slds-modal__content slds-p-around_medium">  
+              <div class="slds-grid slds-grid_vertical">
+                   
+                   <div class="slds-col slds-text-heading_medium">
+                           <span>Processing Row Number now  : {currentRecordCount}</span>
+                   </div>
+                   <div class="slds-col slds-text-heading_medium slds-text-color_error">
+                       <span> Processoed With Errors {errorRecordCount} </span>
+                   </div>
+   
+                   <div class="slds-col slds-text-heading_medium slds-text-color_success">
+                       <span> Processoed Sucessfuly {sucessRecordCount}</span>
+                   </div>
+                   <div class="slds-col">&nbsp;</div>
+
+                   <div class="slds-col">
+                       <lightning-progress-bar size="medium" value={percentProgress} variant="circular"  ></lightning-progress-bar>
+                   </div>
+               </div>
+              
+            </div>  
+            <!------Footer Section-->  
+            <div class="slds-modal__footer">  
+              <lightning-button icon-name="utility:close" label="Stop Import" variant="destructive" onclick={handleStopProcess} >  
+              </lightning-button>  
+              <lightning-button icon-name="utility:pause" label="Pause Import" variant="Brand" onclick={handlePauseProcess} class="slds-m-left_x-small">  
+              </lightning-button>  
+            </div>  
+          </div>  
+        </div>  
+      </template> 
+
+    
+</template>

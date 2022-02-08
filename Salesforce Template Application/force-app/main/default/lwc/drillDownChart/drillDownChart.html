@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 01-27-2022
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col">
+          <!-- Chart Goes here -->
+          
+          <c-chart type={chartType} responsive="true" callback-click={handleCallbackClick}>
+            <c-dataset labels={lables}>
+                    <!-- Add Data Set -->
+                    <template for:each={chartDataSets} for:item="dataset">
+                                <c-data key={dataset.label} 
+                                        label={dataset.label} 
+                                        detail={dataset.detail} 
+                                        bordercolor={dataset.bordercolor} 
+                                        backgroundcolor={dataset.backgroundcolor} 
+                                        stack={dataset.stack} 
+                                        fill="false"></c-data>
+                    </template>
+              
+            </c-dataset>
+            <c-cartesian-axis axis="x" stacked="true" ticks-callback={handleTicksCallback}></c-cartesian-axis>
+            <c-cartesian-axis axis="y" stacked="true" ticks-callback={handleTicksCallback}></c-cartesian-axis>
+            <c-legend position="bottom"></c-legend>
+            <c-title text={title} position="left" fontcolor="#314961"></c-title>
+            </c-chart>
+        </div>
+    </div>
+</template>

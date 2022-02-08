@@ -1,0 +1,55 @@
+<!--
+  @description       : Grid Componet provide functionality of Search 
+                        in the javascript Side only
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 12-18-2021
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+  <div class="slds-grid slds-grid_vertical">
+    <!-- Search For Table -->
+    <div class="slds-col" if:true={displayData}>
+                <div class="slds-grid slds-p-bottom_x-small">
+                    <div class="slds-p-top_x-small">
+                        <span> Total rows :   <span if:true={filteredData}> {filteredData.length} out of  </span> {tableData.length} </span> 
+                    </div>
+                    <div class="slds-col_bump-left "></div>
+                        
+                    <div class="slds-size_5-of-12 " onkeyup={onChangeSearch}>   
+                        <lightning-input class="" 
+                                        name="enter-search" 
+                                        label="Search" placeholder="Search in list when user hits the 'enter"  
+                                        type="search" 
+                                        variant="label-hidden"
+                                        onchange= {hadleClearSearch}>
+
+                        </lightning-input>    
+                    </div>
+                     
+                </div>
+    </div>
+    <!-- Worksheet Content  -->
+    <div class="slds-col" if:true={displayData}>
+             <div style="height: 300px;">
+                <lightning-datatable
+                        key-field="id"
+                        data={displayData}
+                        columns={columns}
+                        enable-infinite-loading
+                        onloadmore={loadMoreData}
+                        hide-checkbox-column="true" 
+                        show-row-number-column="true">
+                </lightning-datatable>
+            </div>                    
+    </div>
+    <div if:false={displayData}>
+        
+            <c-norecords-component file-name="no-record-found"
+                                heading = "Worksheet do not have any data to display "
+                                sub-heading=" "> 
+            </c-norecords-component>
+        
+    </div>
+</div>
+</template>

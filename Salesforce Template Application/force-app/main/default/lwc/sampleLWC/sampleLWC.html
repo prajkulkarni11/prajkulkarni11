@@ -1,0 +1,42 @@
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 11-24-2021
+  @last modified by  : Yogesh.Bhosale
+-->
+
+<template>
+    <lightning-card>
+        <!-- Loading Div to show Component is loading or processing -->
+        <template if:true={isLoading} >
+            <lightning-spinner alternative-text="Loading" variant="brand" onclick={onHandleLoad}></lightning-spinner>
+        </template>
+        <!-- Componet Actions-->
+        <div slot="actions">
+            <lightning-button variant="brand-outline" label={label.loading} onclick={onHandleLoad} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand-outline" label={label.secondaryActon}  class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label={label.primaryAction} class="slds-m-left_x-small"></lightning-button>
+        </div>
+        <!-- Component Heading and Sub headings-->
+        <div slot="title">
+             
+            <div class="slds-grid slds-grid_vertical-align-start">
+                <div class="slds-col">
+                    <div> <lightning-icon  icon-name="standard:proposition" size="large"></lightning-icon> </div>
+                </div>
+                <div class="slds-col">
+                        <div class="slds-p-left_xxx-small slds-text-title_caps slds-text-title" >  {label.title} </div>
+                        <div class="slds-p-left_xxx-small slds-text-heading_small" >  {subHeading} </div>
+                </div>
+
+        </div>
+        </div>
+        
+        <!-- Body of the Componet -->
+        <div class="slds-border_top slds-p-around_xx-small" >
+            Here Content ... 
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\Global Upside Payroll 360"
+		},
+		{
+			"path": "..\\Requirements"
+		},
+		{
+			"path": "..\\Sprint"
+		},
+		{
+			"path": "..\\Third Party Libraries"
+		},
+		{
+			"path": "..\\UAT"
+		},
+		{
+			"path": "..\\Checklist"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\Quality Assurance"
+		}
+	],
+	"settings": {}
+}

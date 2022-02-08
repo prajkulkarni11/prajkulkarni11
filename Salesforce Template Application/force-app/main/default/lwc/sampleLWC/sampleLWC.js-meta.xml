@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <description> Sample Component for Demo </description>
+    <masterLabel>Sample Component </masterLabel>
+    <!-- Where Component is Usable -->
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <!-- Usage -->
+        <targetConfig targets="lightning__RecordPage">
+            <property name="subHeading" type="String" default="Sub-heading " label="Sub Heading"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

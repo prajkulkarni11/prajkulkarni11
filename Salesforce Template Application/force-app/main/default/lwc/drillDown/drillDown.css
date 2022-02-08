@@ -1,0 +1,23 @@
+
+.pink {
+    background-color: darkmagenta;
+    color:aliceblue
+}
+.pink-child {
+    background-color:#D6ADC3;
+    color:black;
+}
+.pink-child-child {
+    background-color: #D6ADC3;
+    color:black;
+}
+.pink-child-child-child{
+    background-color: #D6ADC3;
+    color:black;
+}
+.container {
+    border-radius: 5px;
+}
+.clickable{
+    cursor: pointer;
+}

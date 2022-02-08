@@ -1,0 +1,28 @@
+
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 01-27-2022
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+
+  <div class="slds-grid slds-grid_vertical">
+    <div class="slds-col">
+      <!-- SAMPLE CHART 1-->
+      <c-drill-down-chart lables={dataSet} 
+                          chart-data-sets={datasets} 
+                          title = "Demo Title "
+                          chart-type = "line"
+                          ondrilldown={handleDrillDown}>
+
+      </c-drill-down-chart>
+
+    </div>
+
+
+  </div>
+
+
+</template>

@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 12-23-2021
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+    <div class={className} if:true ={isDisplay}>
+            <div class="slds-grid slds-grid_vertical-align-center " >
+                <div>
+                    <lightning-icon icon-name={iconName} variant="inverse" size="xx-small" class="slds-p-around_x-small"></lightning-icon>
+                </div>
+                <div>
+                    <span class="slds-text-color_inverse slds-icon_container slds-icon-utility-error slds-m-right_x-small" >{message}</span>
+                </div>
+                <div if:true={moreInformation}>
+                    
+                    <lightning-helptext content={moreInformation}></lightning-helptext>
+
+                    
+                </div>
+                <div class="slds-col_bump-left">
+                    <lightning-icon icon-name="utility:close" variant="inverse" onclick={handleHide} size="xx-small" class="slds-p-around_x-small"></lightning-icon>
+                </div>
+            </div> 
+    </div>
+     
+</template>

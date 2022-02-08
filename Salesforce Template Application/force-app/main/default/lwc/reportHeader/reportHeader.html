@@ -1,0 +1,56 @@
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 01-10-2022
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+
+    <div class="slds-grid slds-grid_vertical ">
+        <div class="slds-col">
+            <div class="slds-grid">
+                <div class="slds-col slds-order_1 slds-grid_vertical-align-center">
+                    <!-- Month Selection -->
+                    <template if:true={isDetails} >
+                        <lightning-button-icon icon-name="utility:back" variant="brand" onclick={onBackHandle} size="large" >
+                        </lightning-button-icon>
+                    </template>
+                    
+                    <template if:false={isDetails} >
+                        <lightning-button-icon icon-name="utility:chevronleft" variant="bare" onclick={onPreviousMonth} size="large">
+                        </lightning-button-icon>
+                        
+    
+                         <span class="slds-text-heading_medium"> {month} </span>
+                        <lightning-button-icon icon-name="utility:chevronright" variant="bare" onclick={onNextMonth} size="large">
+                        </lightning-button-icon>
+    
+                    </template>
+                </div>
+                <div class="slds-col slds-order_2">
+                    <lightning-button-group>
+                        <lightning-button label="Monthly" onclick={onMonthly}></lightning-button>
+                        <lightning-button label="Quarterly" onclick={onQuarterly}></lightning-button>
+                        <lightning-button label="Yearly" onclick={onYearly}> </lightning-button>
+                        <lightning-button label="Custom" onclick={onCustom}></lightning-button>
+                    </lightning-button-group>
+                </div>
+                <div class="slds-col slds-order_3" if:true={isCustom}>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-p-horizontal_x-small">
+                            <lightning-input type="date" label="s" value="" min="2020-09-05" max="2020-09-22"
+                                variant='label-hidden' placeholder='start'>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-p-horizontal_x-small">
+                            <lightning-input type="date" label="s" value="" min="2020-09-05" max="2020-09-22"
+                                variant='label-hidden' placeholder='End'>
+                            </lightning-input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

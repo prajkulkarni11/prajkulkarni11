@@ -1,0 +1,27 @@
+{
+    background-color: white;
+}
+
+.chart-container {
+    border : 1px solid lightgray;
+ 
+}
+.divider {
+    background-color: orange
+}
+
+.gross-pay{
+    border-bottom: 3px solid green;
+}
+
+.er-contrubution{
+    border-bottom: 5px solid darkmagenta;
+}
+
+.er-vs-ec{
+    border-bottom: 5px solid cornflowerblue;
+}
+
+.total-deduction{
+    border-bottom: 5px solid orange;
+}

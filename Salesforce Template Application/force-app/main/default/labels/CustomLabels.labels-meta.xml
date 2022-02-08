@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ApplicationName</fullName>
+        <categories>Application Name</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Name</shortDescription>
+        <value>Salesforce Template Application</value>
+    </labels>
+    <labels>
+        <fullName>ApplicationNamespace</fullName>
+        <categories>Namesapace</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Namespace</shortDescription>
+        <value>sftemplateapp</value>
+    </labels>
+    <labels>
+        <fullName>MigrationManager</fullName>
+        <categories>Application Name</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Migration Console</shortDescription>
+        <value>Migration Manager</value>
+    </labels>
+    <labels>
+        <fullName>sftemplateapp</fullName>
+        <categories>Namesapace</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>application Namespace</shortDescription>
+        <value>sftemplateapp</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,153 @@
+<!--
+  @description       : 
+  @author            : Yogesh.Bhosale
+  @group             : 
+  @last modified on  : 01-11-2022
+  @last modified by  : Yogesh.Bhosale
+-->
+<template>
+    <div class="slds-grid slds-grid_vertical">
+        <!-- Header -->
+        <div class="slds-col slds-p-around_small">
+            <c-report-header   onback={onBack}> </c-report-header>
+        </div>
+        <!-- Second Line -->
+        <div class="slds-col">
+            <!-- -->
+            <div class="slds-grid ">
+                <!-- -->
+                <div class=" slds-col " if:true={regions}>
+                
+                    <template for:each={regions} for:item="region">
+                        <c-report-filter title={region.name} countries={region.countries}  key={region.id}>
+
+                        </c-report-filter>
+                    </template>
+                    
+
+                </div>
+                <div class="slds-p-around_xxx-small divider">
+
+                </div>
+                <div class="slds-p-around_small slds-size_10-of-12">
+                    <!-- 4 Charts half width each two column layout -->
+                    <div class="slds-grid slds-wrap ">
+
+                        <div class="slds-col slds-size_1-of-2 chart-container " onclick={onGrossPayDetail}>
+                            <!--Chart 1-->
+                                <div class="slds-grid slds-grid_vertical">
+                                        <!-- Chart Heading and Trends -->
+                                        <div class="slds-col ">
+                                                <div class="slds-grid slds-grid_align-space slds-p-around_xxx-small">
+                                                    <div class="slds-col">
+                                                    <a onclick={onGrossPayDetail}>{grossPay.label}</a>
+                                                    </div>
+                                                    <div class="slds-col">
+                                                    <span>{grossPay.total}</span>
+                                                    </div>
+                                                    <div class="slds-col">
+                                                        <lightning-icon icon-name="utility:down" variant="error" if:true={grossPay.isTendDown}></lightning-icon>
+                                                        <lightning-icon icon-name="utility:up"  variant="success" if:true={grossPay.isTendUp}></lightning-icon>
+                                                    </div>
+                                              </div>
+                                        </div>
+                                        <div class="slds-col">
+                                            <c-chart type="line" responsive="true">
+                                                <c-dataset labels={grossPay.labels}>
+                                                    <c-data label={grossPay.label} 
+                                                            detail={grossPay.detail} 
+                                                            bordercolor="green"
+                                                            backgroundcolor="rgba(119, 185, 242, 0.2)"
+                                                            fill="false">
+                                                    </c-data>
+                                                </c-dataset>
+                                                <c-title text="Gross Pay" position="left" fontcolor="green"></c-title>
+                                                <c-legend position="bottom"></c-legend>
+                                            </c-chart>        
+                                        </div>
+                              </div>
+
+                                
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 chart-container" >
+                            <!--Chart 2-->
+                            <div class="slds-grid slds-grid_vertical">
+                                <!-- Chart Heading and Trends -->
+                                <div class="slds-col">
+                                        <div class="slds-grid slds-grid_align-space slds-p-around_xxx-small">
+                                            <div class="slds-col">
+                                            <span>{employerContribution.label}</span>
+                                            </div>
+                                            <div class="slds-col">
+                                            <span>{employerContribution.total}</span>
+                                            </div>
+                                            <div class="slds-col">
+                                                <lightning-icon icon-name="utility:down" variant="error" if:true={employerContribution.isTendDown}></lightning-icon>
+                                                <lightning-icon icon-name="utility:up"  variant="success" if:true={employerContribution.isTendUp}></lightning-icon>
+                                            </div>
+                                      </div>
+                                </div>
+                                <div class="slds-col ">
+                                    <c-chart type="line" responsive="true">
+                                        <c-dataset labels={employerContribution.labels}>
+                                            <c-data label={employerContribution.label} 
+                                                    detail={employerContribution.detail} 
+                                                    bordercolor="red"
+                                                    backgroundcolor="rgba(84, 167, 123, 1)"
+                                                    fill="false">
+                                            </c-data>
+                                        </c-dataset>
+                                        <c-title text={employerContribution.label} position="left" fontcolor="red"></c-title>
+                                        <c-legend position="left"></c-legend>
+                                    </c-chart> 
+                                </div>
+                        </div>
+                            
+                        </div>
+
+
+                        <div class="slds-col slds-size_1-of-2 chart-container">
+                            <!--Chart 3-->
+                            <c-chart type="bar" responsive="true">
+                                <c-dataset labels='["January", "February", "March", "April", "May", "June", "July"]'>
+                                    <c-data label="Employer Contribution" detail="[10, 30, 46, 2, 8, 50, 0]"
+                                        backgroundcolor="rgba(82, 183, 216, 1)" bordercolor="rgba(82, 183, 216, 1)"
+                                        fill="false" order="2"></c-data>
+                                    <c-data label="Employee Count" detail="[7, 49, 46, 13, 25, 30, 22]"
+                                        backgroundcolor="rgba(255, 176, 59, 1)" bordercolor="rgba(255, 176, 59, 1)"
+                                        fill="false" order="1" type="line"></c-data>
+                                </c-dataset>
+                                <c-title text="Employer Contribution vs Employee Count"></c-title>
+                                <c-tooltip position="nearest" mode="index" enabled="true"></c-tooltip>
+                                <c-legend position="bottom"></c-legend>
+                            </c-chart>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 chart-container">
+                            <!--Chart 4-->
+                            <c-chart type="bar" responsive="true">
+                                <c-dataset labels='["January", "February", "March", "April", "May", "June", "July"]'>
+                                    <c-data label="Salary" detail="[40, 47, 44, 38, 27, 31, 25]"
+                                        backgroundcolor='rgba(50, 150, 237, 1)' stack="1"></c-data>
+                                    <c-data label="PF" detail="[10, 12, 7, 5, 4, 6, 8]"
+                                        backgroundcolor='rgba(119, 185, 242, 1)' stack="1"></c-data>
+                                    <c-data label="Tax" detail="[17, 11, 22, 18, 12, 7, 5]"
+                                        backgroundcolor='rgba(157, 83, 242, 1)' stack="1"></c-data>
+                                </c-dataset>
+                                <c-cartesian-axis axis="x" stacked="true"> </c-cartesian-axis>
+                                <c-cartesian-axis axis="y" stacked="true"> </c-cartesian-axis>
+                                <c-title text="Total EE Deduction"></c-title>
+                                <c-legend position="bottom"></c-legend>
+                            </c-chart>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="slds-col">
+            Footer
+        </div>
+    </div>
+</template>
