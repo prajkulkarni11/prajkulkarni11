@@ -1,20 +1,30 @@
-public class ThirdMaxEle {
+/**
+* @description       : find the third max from array
+* @author            : Neha Athawale
+* @group             : 
+* @last modified on  : 02-08-2022
+* @last modified by  : Neha Athawale
+**/
 
-    public static void MaximumThirdEle(){
+//find the third max from array
+public with sharing class ThirdMaxEle {
+
+    public integer MaximumThirdEle(){
             integer[] arr=new integer[]{2,3,5,1,6};
          	integer temp=0;
-            for(integer j=0;j<arr.size();j++)
+            for(integer row=0;row<arr.size();row++)
             {
-                for(integer i=j+1;i<arr.size();i++)
+                for(integer col=row+1;col<arr.size();col++)
                 {
-                    if(arr[j]<arr[i])
+                    if(arr[row]<arr[col])
                     {
-                                temp=arr[j];
-                                arr[j]=arr[i];
-                                arr[i]=temp;
+                                temp=arr[row];
+                                arr[row]=arr[col];
+                                arr[col]=temp;
                     }
                 }
             }
                 system.debug('Third largest ele is '+arr[2]);
+        return null;
     }
 }
