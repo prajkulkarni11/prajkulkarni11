@@ -1,26 +1,17 @@
-/**
-* @description       :Sort all the elements  with multicolumn sort when it is is in parent child relationship
-* @author            : Minal Patil
-* @group             : 
-* @last modified on  : 02-08-2022
-* @last modified by  : Minal Patil
-**/
+public with sharing class MultiSortParentChild {
 
-public class MultisortParentChild {
-
-    public string sort()
+    public string sortMethod()
      {
-         List<Departments__c> dept=[select Name,(select Name,Salary__c from Employee__r order by Salary__c desc) from Departments__c order by Name desc];
-             for(Departments__c d:dept)
+         List<Department__c> dept=[select Name,(select Name,EmpNo__c,Department__c from Employee_SF_Flows__r order by EmpNo__c desc) from Department__c order by Name desc];
+             for(Department__c d:dept)
              {
                  system.debug(d);
-                 for(Employee__c e:d.Employee__r)
+                 for(Employee_SF_Flows__c emp:d.Employee_SF_Flows__r)
                  {
-                     system.debug(e);
+                     system.debug(emp);
                  }
              }
-     
-         
          return null;
      }
+
 }

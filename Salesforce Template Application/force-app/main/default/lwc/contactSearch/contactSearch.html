@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Contact Search">
+    <div class="slds-var-m-around_medium">
+    <lightning-input type="search" onchange={handleSearch} label="Search Contact" value={searchKey}>
+    </lightning-input>
+    </div>
+    
+    <template if:true={contacts.data}>
+    <template for:each={contacts.data} for:item="con">
+    <p key={con.id}>
+    {con.FirstName}
+    {con.LastName}
+    {con.Email}
+    </p>
+    </template>
+    
+    </template>
+    </lightning-card>
+    </template>
