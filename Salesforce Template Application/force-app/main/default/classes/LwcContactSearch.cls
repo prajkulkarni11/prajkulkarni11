@@ -1,7 +1,7 @@
 
 
 /**
- * @File Name          : LwcContactSearch.cls
+ * @File Name          : OppTrigger
  * @Description        : 
  * @Author             : Swapnil Thalal
  * @Group              : 

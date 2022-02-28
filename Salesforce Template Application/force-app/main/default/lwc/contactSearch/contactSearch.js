@@ -21,6 +21,7 @@ export default class SearchContact extends LightningElement {
 @wire(fetchCon,{conSearchKey:'$searchKey'})
 contacts;
 
+
 handleSearch(event){
 window.clearTimeout(this.delayTimeout);
 const searchKey = event.target.value;
