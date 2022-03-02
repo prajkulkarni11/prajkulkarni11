@@ -1,4 +1,17 @@
-public class DeleteHiringManager {
+
+/**
+ * @File Name          : ContactSearch.js
+ * @Description        : 
+ * @Author             : Swapnil Thalal
+ * @Group              : 
+ * @Last Modified By   : Swapnil Thalal
+ * @Last Modified On   : 01/03/2022, 3:40:39 pm
+ * @Modification Log   : 
+ 
+**/
+
+
+public with sharing class DeleteHiringManager {
     
     public static void method1(){
         
