@@ -1,4 +1,4 @@
-public class ManageCustomerDetails 
+public  with sharing class ManageCustomerDetails 
 {
     Public String name,address,contact;
     public ManageCustomerDetails(String a, String b, String c)

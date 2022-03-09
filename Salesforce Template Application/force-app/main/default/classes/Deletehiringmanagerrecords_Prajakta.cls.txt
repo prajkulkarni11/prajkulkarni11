@@ -1,4 +1,4 @@
-   public class Deletehiringmanagerrecords {
+   public with sharing class Deletehiringmanagerrecords {
     public static void getrecords(){
        List<Hiring_manager__c> listofhiring =New list <Hiring_manager__c>();
        //Hiring_manager_c  hiringman= new Hiring_manager_c();

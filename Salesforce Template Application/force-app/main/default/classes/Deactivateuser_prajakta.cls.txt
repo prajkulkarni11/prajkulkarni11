@@ -1,4 +1,4 @@
-   public class Deactivateuser {
+   public with sharing class Deactivateuser {
     public static void deactivate(){
 User us= [SELECT Username
                 FROM  User 

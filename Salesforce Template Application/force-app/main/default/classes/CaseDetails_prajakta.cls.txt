@@ -1,4 +1,4 @@
-public class CaseDetails
+public with sharing class CaseDetails
 {
 public static void searchForCases(){ 
         

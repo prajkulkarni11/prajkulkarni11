@@ -1,4 +1,4 @@
-  public class Undeletehiringmanager {
+  public with sharing class Undeletehiringmanager {
 public static void getrecords(){
         List<Hiring_manager__c> listhiring =New list <Hiring_manager__c>();
             listhiring  =[SELECT Name

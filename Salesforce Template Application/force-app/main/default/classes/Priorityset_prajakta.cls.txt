@@ -1,4 +1,4 @@
-    public class Priorityset {
+    public with sharing class Priorityset {
 public static void getvalue(){
         case c= new case();
          c.Status='New';
