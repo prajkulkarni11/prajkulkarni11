@@ -1,0 +1,16 @@
+  public class Undeletehiringmanager {
+public static void getrecords(){
+        List<Hiring_manager__c> listhiring =New list <Hiring_manager__c>();
+            listhiring  =[SELECT Name
+                             FROM  Hiring_manager__c
+                              WHERE name Like '%p'
+                               ALL ROWS];
+    
+   
+    undelete listhiring;
+         
+        
+    system.debug ('listofhiringm =' +listhiring  );
+
+}
+}

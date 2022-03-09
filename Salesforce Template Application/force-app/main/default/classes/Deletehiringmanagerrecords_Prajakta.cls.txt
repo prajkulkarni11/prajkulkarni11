@@ -1,0 +1,19 @@
+   public class Deletehiringmanagerrecords {
+    public static void getrecords(){
+       List<Hiring_manager__c> listofhiring =New list <Hiring_manager__c>();
+       //Hiring_manager_c  hiringman= new Hiring_manager_c();
+            listofhiring =[SELECT Name
+                             FROM Hiring_manager__c  
+                              WHERE name like '%p'];
+        
+       
+       delete listofhiring;
+        
+        
+        system.debug ('listofaccount =' +listofhiring );
+
+}
+    //system.debug('listofman =' + listofhiring );
+
+
+}
