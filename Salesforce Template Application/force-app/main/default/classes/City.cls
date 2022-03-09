@@ -1,21 +1,19 @@
 
-
 /**
 
  * @File Name          : City.cls
- * @Description        : Trigger Assignment 01:	On Account and Opportunity object there is city field and whenever i update the account city field with new value then atomatically change assosiated opportunity city field get updated
+ * @Description        : Collection Assignment 01:	On Account and Opportunity object there is city field and whenever i update the account city field with new value then atomatically change assosiated opportunity city field get updated
  * @Author             : Swapnil Thalal
  * @Group              : 
  * @Last Modified By   : Swapnil Thalal
- * @Last Modified On   : 07/03/2022, 1:40:39 pm
+ * @Last Modified On   : 05/03/2022, 4:40:39 pm
 * @Modification Log   : 
 
  **/
 
-
 public with sharing class City {
     
-    public static void getcity(List<account> acclist){
+    public void getCity(List<account> acclist){
     String city,accid;
 
         for(account a: acclist){
