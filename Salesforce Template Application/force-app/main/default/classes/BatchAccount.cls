@@ -2,7 +2,7 @@
  * @ Author: Aishwarya 
  * @ Create Time: 2022-03-10 12:38:42
  * @ Modified by: Your name
- * @ Modified time: 2022-03-10 16:58:37
+ * @ Modified time: 2022-03-10 17:06:36
  * @ Description://2.	Create a Batch Class, to Calculate the Total Annual Revenue of all the Account Records in the object, by dividing them to the various batches of size 4. 
 
  */
