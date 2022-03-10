@@ -2,7 +2,7 @@
  * @ Author: Aishwarya Shelke
  * @ Create Time: 2022-03-10 12:38:42
  * @ Modified by: Your name
- * @ Modified time: 2022-03-10 13:29:15
+ * @ Modified time: 2022-03-10 16:50:52
  * @ Description:3.	Create a Future Method, to Insert a Hiring Manager Record and to De-Activate a User Record.
 
  */
