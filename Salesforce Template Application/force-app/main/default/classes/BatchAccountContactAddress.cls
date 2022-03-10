@@ -1,11 +1,11 @@
 /**
  * @ Author: Aishwarya Shelke
  * @ Create Time: 2022-03-10 12:38:42
- * @ Modified by: Aishwarya Shelke
- * @ Modified time: 2022-03-10 12:59:38
- * @ Description://1.	Create a Batch Job to Synchronize the Account Record's Billing Address information into the associated Contact Record's Mailing Address by dividing the Account Records to the various batches of size "4".(
+ * @ Modified by: Your name
+ * @ Modified time: 2022-03-10 13:26:59
+ * @ Description:1.	Create a Batch Job to Synchronize the Account Record's Billing Address information into the associated Contact Record's Mailing Address by dividing the Account Records to the various batches of size "4".(
 
- */
+ */ss
 
 
 global with sharing class BatchAccountContactAddress implements Database.Batchable<SObject>,Database.Stateful 
