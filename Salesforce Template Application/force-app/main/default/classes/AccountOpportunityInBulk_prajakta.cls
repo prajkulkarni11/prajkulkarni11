@@ -2,7 +2,7 @@
  * @ Author: Prajakta Kulkarni
  * @ Create Time: 2022-03-10 15:16:51
  * @ Modified by: Your name
- * @ Modified time: 2022-03-10 15:30:57
+ * @ Modified time: 2022-03-10 15:42:22
  * @ Description:Write an apex program, to insert an Account Record. And 10 Related Opportunity Records in the object by using Bulkification Process.( AccountOpportunityInBulk)
  */
 

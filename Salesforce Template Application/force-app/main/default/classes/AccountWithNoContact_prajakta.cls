@@ -2,7 +2,7 @@
  * @ Author: Prajakta kulkarni
  * @ Create Time: 2022-03-10 15:16:52
  * @ Modified by: Your name
- * @ Modified time: 2022-03-10 15:27:39
+ * @ Modified time: 2022-03-10 15:42:07
  * @ Description:display all accounts which have null contacts associated with them.(AccountWithNoContact)
  */
 

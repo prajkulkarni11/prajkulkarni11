@@ -2,7 +2,7 @@
  * @ Author: Prajakta Kulkarni
  * @ Create Time: 2022-03-10 15:16:52
  * @ Modified by: Your name
- * @ Modified time: 2022-03-10 15:35:31
+ * @ Modified time: 2022-03-10 15:40:47
  * @ Description:Write an apex program, to insert 250 Lead Records inside the object. (InsertLead)
  */
 

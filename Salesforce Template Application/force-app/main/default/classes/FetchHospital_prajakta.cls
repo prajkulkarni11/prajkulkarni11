@@ -2,7 +2,7 @@
  * @ Author: Prajakta Kulkarni
  * @ Create Time: 2022-03-10 15:16:52
  * @ Modified by: Your name
- * @ Modified time: 2022-03-10 15:33:12
+ * @ Modified time: 2022-03-10 15:41:39
  * @ Description:Fetch Name, max_no_of_appointments__c of all the clinics that are in Florida.(FetchHospital)
  */
 

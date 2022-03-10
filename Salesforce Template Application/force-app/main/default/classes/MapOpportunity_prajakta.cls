@@ -2,7 +2,7 @@
  * @ Author: Prajakta Kulkarni
  * @ Create Time: 2022-03-10 15:16:52
  * @ Modified by: Your name
- * @ Modified time: 2022-03-10 15:36:24
+ * @ Modified time: 2022-03-10 15:40:10
  * @ Description:Create a Map and insert record into opportunities object using map.(OpportunityMap)
  */
 
