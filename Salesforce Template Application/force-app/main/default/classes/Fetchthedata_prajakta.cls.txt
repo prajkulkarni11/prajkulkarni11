@@ -1,0 +1,17 @@
+    public with sharing class Fetchthedata {
+ public static List<Account> accLists(){
+        
+        List<Account> acc = [select id,name,(select id from contacts),(select id from Opportunities),(select id from cases)
+                             
+                    from Account
+                    where name='Burlington Textiles Corp of America'];
+        
+        system.debug('acc----->>>>>'+acc);
+        
+        //(select id from Opportunities),
+        //(select id from cases)
+        
+        return acc;
+ }
+}
+
