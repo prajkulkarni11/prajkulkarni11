@@ -2,7 +2,7 @@
  * @ Author: Aishwarya Shelke
  * @ Create Time: 2022-03-10 12:38:42
  * @ Modified by: Your name
- * @ Modified time: 2022-03-10 14:41:12
+ * @ Modified time: 2022-03-10 16:58:22
  * @ Description:1.	Create a Batch Job to Synchronize the Account Record's Billing Address information into the associated Contact Record's Mailing Address by dividing the Account Records to the various batches of size "4".(
 
  */
