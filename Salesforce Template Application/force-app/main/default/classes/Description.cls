@@ -1,14 +1,16 @@
+
 /**
 
  * @File Name          : Description.cls
- * @Description        :Trigger Assignment 02:There is a description field on Account and also on Contact. Whenever the account description is updated, the related Contact description should also be updated but I should be able to identify from the description which account this contact is related to.
+ * @Description        :  Assignment 02:when account is updated, opportunity associated to it should be updated in there description field is same +add account name
  * @Author             : Swapnil Thalal
  * @Group              : 
  * @Last Modified By   : Swapnil Thalal
- * @Last Modified On   : 07/03/2022, 4:40:39 pm
+ * @Last Modified On   : 12-03-22, 2:40:39 pm
 * @Modification Log   : 
 
- **/ 
+ **/
+
 public with sharing class Description {
 
     public static void getdescription(List<account> acclist){
