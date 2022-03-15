@@ -2,7 +2,7 @@
  * @ Author:Aishwarya Shelke
  * @ Create Time: 2022-03-15 12:26:16
  * @ Modified by: Your name
- * @ Modified time: 2022-03-15 12:30:33
+ * @ Modified time: 2022-03-15 13:29:37
  * @ Description://Basic salary is 10000 DA=20% of basic salary , HRA= 30% of BS find Net salary (NS=BS+DA+HRA)
 
  */
