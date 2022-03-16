@@ -1,0 +1,21 @@
+  public with sharing class Updatehiringmanager {
+    public static void getrecords(){
+       //List<Hiring_manager__c> listofhiring =New list <Hiring_manager__c>();
+       Hiring_manager__c  hiringman= [SELECT Name ,Location__c,Contact__c
+                             FROM Hiring_manager__c  
+                              WHERE name='Apex HR'];
+        
+        
+        
+        
+       hiringman.Location__c='pune';
+       hiringman.Contact__c= '5555666666';
+        
+        update hiringman;
+       
+       system.debug ('listofaccount =' +hiringman );
+
+
+}
+    
+}

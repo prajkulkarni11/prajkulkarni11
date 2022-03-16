@@ -1,0 +1,16 @@
+   public with sharing class Deactivateuser {
+    public static void deactivate(){
+User us= [SELECT Username
+                FROM  User 
+                WHERE username='pranjallokhande1@gmail.com'];
+        us.IsActive= false;
+        update us;
+        
+        
+        
+        system.debug('***='+us);
+        
+        
+    }     
+
+}

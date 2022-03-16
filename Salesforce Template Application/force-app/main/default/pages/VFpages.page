@@ -1,0 +1,6 @@
+<apex:page controller="VFController">
+    <apex:form >
+        <apex:outputText value="Watch this counter: {!count}" id="counter"/>
+        <apex:actionPoller action="{!incrementCounter}" rerender="counter" interval="15"/>
+    </apex:form>
+</apex:page>
