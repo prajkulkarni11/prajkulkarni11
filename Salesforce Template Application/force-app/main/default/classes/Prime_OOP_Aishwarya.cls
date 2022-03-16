@@ -2,7 +2,7 @@
  * @ Author:Aishwarya Shelke
  * @ Create Time: 2022-03-16 14:35:30
  * @ Modified by: Your name
- * @ Modified time: 2022-03-16 14:36:32
+ * @ Modified time: 2022-03-16 14:40:36
  * @ Description://check given number is prime or not
 
  */
