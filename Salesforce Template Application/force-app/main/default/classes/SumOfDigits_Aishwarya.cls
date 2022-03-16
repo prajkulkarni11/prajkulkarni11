@@ -2,8 +2,8 @@
  * @ Author: Aishwarya Shelke
  * @ Create Time: 2022-03-15 12:26:16
  * @ Modified by: Your name
- * @ Modified time: 2022-03-15 13:29:30
- * @ Description://print sum of digits
+ * @ Modified time: 2022-03-16 15:01:52
+ * @ Description:print sum of digits
 
  */
 
