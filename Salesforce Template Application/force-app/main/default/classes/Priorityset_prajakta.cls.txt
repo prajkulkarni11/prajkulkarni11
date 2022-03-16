@@ -1,0 +1,19 @@
+    public with sharing class Priorityset {
+public static void getvalue(){
+        case c= new case();
+         c.Status='New';
+      c.Origin='phone';
+    list<case> clist=[select Status,Origin
+                           from case
+                          where Priority!='High'];
+        for(case cs:clist){
+            cs.Priority='High';
+            clist.add(cs);
+            update clist;
+       system.debug('*****='+clist);
+ insert c;
+       system.debug('***='+c);   
+                      
+        }         
+}
+}
