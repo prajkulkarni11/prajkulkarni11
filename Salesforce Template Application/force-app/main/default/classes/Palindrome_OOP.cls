@@ -2,7 +2,7 @@
  * @ Author: Aishwarya S
  * @ Create Time: 2022-03-15 18:16:01
  * @ Modified by: Your name
- * @ Modified time: 2022-03-15 18:18:18
+ * @ Modified time: 2022-03-16 10:59:58
  * @ Description://check palindrome or not
 
  */

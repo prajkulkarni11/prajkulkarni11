@@ -2,7 +2,7 @@
  * @ Author: Aishwarya Shelke
  * @ Create Time: 2022-03-15 18:16:01
  * @ Modified by: Your name
- * @ Modified time: 2022-03-15 18:16:52
+ * @ Modified time: 2022-03-16 11:00:07
  * @ Description://print sum of digits
 
  */
