@@ -2,7 +2,7 @@
  * @ Author: Aishwarya Shelke
  * @ Create Time: 2022-03-16 14:35:30
  * @ Modified by: Your name
- * @ Modified time: 2022-03-16 15:55:29
+ * @ Modified time: 2022-03-16 16:41:55
  * @ Description://check palindrome or not
 
  */
