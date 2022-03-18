@@ -1,19 +1,12 @@
-
 /**
-
  * @File Name          : GetWeatherStatus.cls
- * @Description        :Rest Api Assignment 03:Fetch daily weather data from https://openweathermap.org/api for Pune and email it daily at 10 am to your personal email. 
-
- * @Author             : Swapnil Thalal
+ * @Description        :  Trigger Assignment 27:Fetch daily weather data from https://openweathermap.org/api for Pune and email it daily at 10 am to your personal email. [Use REST API]
  * @Group              : 
  * @Last Modified By   : Swapnil Thalal
- * @Last Modified On   : 07/03/2022, 6:40:39 pm
+ * @Last Modified On   : 17-03-22, 4:50:39 pm
 * @Modification Log   : 
-
- **/ 
-
-
-global class GetWeatherStatus Implements Schedulable{
+ **/
+global with sharing class GetWeatherStatus Implements Schedulable{
     String status='';
     public  void getweathertemperature(){
         Http http = new Http();
