@@ -1,0 +1,123 @@
+<!--
+ * @ Author: Aishwarya Shelke
+ * @ Create Time: 2022-03-19 14:17:07
+ * @ Modified by: Your name
+ * @ Modified time: 2022-03-19 14:18:39
+ * @ Description: 3.	create a screen for accepting Employee information
+ -->
+ <html>
+
+    <head>
+        <script>
+            function EmployeeRegister() {
+                var firstname =document.forms["EmpForm"]["First Name"];
+                var lastname = document.forms["EmpForm"]["Last Name"];
+                var address = document.forms["EmpForm"]["Address"];
+                var mobileno = document.forms["EmpForm"]["contact"];
+                var gender = document.forms["EmpForm"]["Gender"];
+                var yourinterests = document.forms["EmpForm"]["Your Interests"];
+    
+                if (firstname.value == "") {
+                    window.alert("Please enter your firstname.");
+                    firstname.focus();
+                    return false;
+                }
+    
+                if (lastname.value == "") {
+                    window.alert("Please enter your lastname.");
+                    lastname.focus();
+                    return false;
+                }
+    
+                if (address.value == "") {
+                    window.alert("Please enter your address");
+                    address.focus();
+                    return false;
+                }
+    
+                if (mobileno.value == "") {
+                    window.alert("Please enter your contact number");
+                    mobileno.focus();
+                    return false;
+                }
+    
+                if (gender.value == "") {
+                    window.alert("Please select gender");
+                    gender.focus();
+                    return false;
+                }
+    
+                if (yourinterests.selectedIndex < 1) {
+                    alert("Please select your area of interests");
+                    yourinterests.focus();
+                    return false;
+                }
+    
+                return true;
+            }
+        </script>
+    
+        <style>
+            form textarea {
+                float: left;
+                width: 350px;
+                height: 150px;
+            }
+            
+            [type="submit"] {
+                clear: left;
+                margin: 10px 0 0 150px;
+                font-size: 18px
+            }
+            
+            [type="reset"] {
+                clear: left;
+                font-size: 18px
+            }
+            
+            
+            
+            form {
+                border: 2px solid black;
+                border-radius: 5px;
+                margin: 0 auto;
+                width: 600px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1 style="text-align: center;">PERSONAL INFORMATION</h1>
+        <form name="EmpForm" action="/employee.html" onsubmit="EmployeeRegister()" method="post">
+            <p>First Name : <input type="text" size="60" name="First Name" /></p>
+            <br />
+            <p>Last Name : <input type="text" size="60" name="Last Name" /></p>
+            <br />
+            <p>Address : <input type="text" size="62" name="Address" /></p>
+            <br />
+            <p>Mobile No: <input type="text" size="60" name="contact" /></p>
+            <br />
+            <p>Gender : <input type="radio" id="male" name="gender" value="MALE">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="FEMALE">
+                <label for="female">Female</label><br></p>
+    
+            <p>Your Interests :
+                <input type="checkbox" id="computer" onclick="EmployeeRegister()">
+                <label for="computer">Computer</label>
+                <input type="checkbox" id="sports" onclick="EmployeeRegister()">
+                <label for="sports">Sports </label>
+                <input type="checkbox" id="music" onclick="EmployeeRegister()">
+                <label for="music">Music </label>
+                <br /></p>
+            <br/>
+    
+            <p>
+                <input type="submit" value="Submit" name="Submit" />
+                <input type="reset" value="Reset" name="Reset" />
+            </p>
+        </form>
+    </body>
+    
+    </html>
+    
