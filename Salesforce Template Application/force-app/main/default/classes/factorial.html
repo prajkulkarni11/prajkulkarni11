@@ -1,0 +1,37 @@
+<!--
+ * @ Author: Aishwarya Shelke
+ * @ Create Time: 2022-03-21 18:21:26
+ * @ Modified by: Your name
+ * @ Modified time: 2022-03-21 18:25:34
+ * @ Description: 2.implement callback function for calculating factorial of a number.
+ -->
+
+ <html>
+<body>
+    
+    Enter Number<input type="number" min="1" id="no">
+    <button type="button" onclick="factorial()">Sumbit </button><br>
+     Factorial : <span id="answer"> </span> 
+    <script>
+        
+        function factorial() {
+            var num = parseInt(document.getElementById("no").value);
+            if (isNaN(num)) {
+                alert(" Please Enter valid number ");
+                return;
+            }
+            var factorial = factorial_fun(num);
+            document.getElementById("answer").innerHTML = factorial;
+        }
+
+        function factorial_fun(num) {
+            var i;
+            var fact = 1;
+            for (i = 1; i <= num; i++) {
+                fact = fact * i;
+            }
+            return fact;
+        }
+    </script>
+</body>
+</html>
