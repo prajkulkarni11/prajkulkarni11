@@ -1,0 +1,41 @@
+/**
+ * @ Author: Aishwarya Shelke
+ * @ Create Time: 2022-03-22 16:21:07
+ * @ Modified by: Your name
+ * @ Modified time: 2022-03-22 16:27:54
+ * @ Description: //4.create a visual force page of username and password and validate from client side
+
+ */
+
+
+<apex:page controller="validateVF">
+    <apex:form >
+        <apex:pageBlock >
+            Enter Username:<apex:inputText id="name"/>
+            Enter Password:<apex:inputSecret id="pass"/>
+            <apex:commandButton value="submit" onclick="validate();"  ondblclick="submitvf();"></apex:commandButton>
+            
+        </apex:pageBlock>
+    </apex:form>
+    <script>
+    function validate()
+    {
+        var name=document.getElementById(name).value;
+        var pass=document.getElementById(pass).value;
+        if(name=="")
+            {
+                alert('username field can not be blank');
+            }
+        else
+            if(pass=="")
+            {
+                alert("password field can not be blank");
+            }
+    
+        }
+    function submitvf()
+    {
+        window.open('/apex/hello');
+        }
+    </script>
+</apex:page>

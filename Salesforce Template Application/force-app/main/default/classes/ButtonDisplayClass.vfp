@@ -1,0 +1,22 @@
+/**
+ * @ Author:Aishwarya Shelke
+ * @ Create Time: 2022-03-22 16:21:07
+ * @ Modified by: Your name
+ * @ Modified time: 2022-03-22 16:24:50
+ * @ Description: //1.create a visual force page on click of a button display Contact object details.
+
+ */
+
+
+<apex:page Controller="ButtonDisplayClass"  >
+    <apex:form >
+        <apex:pageBlock >
+        <apex:commandButton value="DisplayContactRecord" action="{!onClick}"/>
+			<apex:pageBlockTable value="{!Contacts}" var="c">
+                <apex:column value="{!c.name}" />
+                <apex:column value="{!c.email}" />
+                <apex:column value="{!c.AccountId}" />
+			 </apex:pageBlockTable>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

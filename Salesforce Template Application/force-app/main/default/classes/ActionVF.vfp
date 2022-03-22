@@ -1,0 +1,39 @@
+/**
+ * @ Author: Aishwarya Shelke
+ * @ Create Time: 2022-03-22 16:21:07
+ * @ Modified by: Your name
+ * @ Modified time: 2022-03-22 16:25:32
+ * @ Description://3.create a visual force page with username and password and validate through java script by implementing the 
+//concept of action function tag? 
+ */
+
+
+<apex:page controller="ActionVF" showHeader="true">
+<apex:form id="TestFrm">
+First Name : 
+<apex:inputtext id="txtFirstName" required="true">
+Last Name : 
+<apex:inputtext id="txtLastName" required="true">
+<span class="btn" onclick="return GetMyName()"> Submit </span>
+<b><apex:outputlabel value="{!ReturnValue}"></apex:outputlabel></b>
+<apex:actionfunction action="{!Result}" name="TestAF" rerender="resultPanel" status="TestStatus">
+<apex:param assignto="{!FirstName}" name="FirstParameter" value=""/>
+<apex:param assignto="{!LastName}" name="SecondParameter" value=""/>
+</apex:actionfunction>
+</apex:inputtext></apex:inputtext></apex:form>
+  
+<script type="text/javascript">
+function GetMyName()
+{
+var FirstNameValue = document.getElementById("{!$Component.TestFrm.txtFirstName}").value;
+var LastNameValue = document.getElementById("{!$Component.TestFrm.txtLastName}").value;
+if(FirstNameValue == '' || LastNameValue == '')
+{
+alert('Please enter your first name and last name');
+return false;
+}
+TestAF(FirstNameValue ,LastNameValue );
+return true;
+}
+</script>
+</apex:page>
