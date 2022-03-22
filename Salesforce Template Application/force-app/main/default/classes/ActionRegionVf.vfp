@@ -1,0 +1,43 @@
+/**
+ * @ Author: Aishwarya Shelke
+ * @ Create Time: 2022-03-22 16:21:07
+ * @ Modified by: Your name
+ * @ Modified time: 2022-03-22 16:26:31
+ * @ Description: //5.create a visual force page to implement the action region for an application like on select of list, 
+//text field will be visible.
+ */
+
+ 
+<apex:page standardController="Opportunity">
+  <apex:form >
+    <apex:pageBlock title="Edit Opportunity" id="thePageBlock" mode="edit">
+
+      <apex:pageBlockButtons >
+        <apex:commandButton value="Save" action="{!save}"/>
+        <apex:commandButton value="Cancel" action="{!cancel}"/>
+      </apex:pageBlockButtons>
+
+    <apex:pageBlockSection columns="1">
+      <apex:inputField value="{!opportunity.name}"/>
+      <apex:pageBlockSectionItem>
+      <apex:outputLabel value="{!$ObjectType.opportunity.fields.stageName.label}"
+                        for="stage"/>
+      <!--
+           Without the actionregion, selecting a stage from the picklist would cause
+           a validation error if you hadn't already entered data in the required name
+           and close date fields.  It would also update the timestamp.
+      -->
+      <apex:actionRegion>
+        <apex:inputField value="{!opportunity.stageName}" id="stage">
+          <apex:actionSupport event="onchange" rerender="thePageBlock"
+                              status="status"/>
+          </apex:inputField>
+          </apex:actionRegion>
+      </apex:pageBlockSectionItem>
+        <apex:inputfield value="{!opportunity.closedate}"/>
+        {!text(now())}
+        </apex:pageBlockSection>
+
+      </apex:pageBlock>
+    </apex:form>
+</apex:page>

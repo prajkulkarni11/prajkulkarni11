@@ -1,0 +1,27 @@
+/**
+ * @ Author: Aishwarya Shelke
+ * @ Create Time: 2022-03-22 16:21:07
+ * @ Modified by: Your name
+ * @ Modified time: 2022-03-22 16:27:27
+ * @ Description: //2.create visual force page for the custom object through controller class and display through 
+//pageblocktable,datatable. 
+ */
+
+
+<apex:page controller="PrintAccountColumn" sidebar="false">
+    <apex:form >
+        <apex:pageBlock title="Position Data Table">
+            <apex:pageBlockTable value="{!pos}" var="A">
+                <apex:column value="{!A.Name}" /> 
+                <apex:column value="{!A.Functional_Area__c}"/>
+                <apex:column value="{!A.Open_Date__c}"/>
+                <apex:column value="{!A.Status__c}"/>
+                <apex:column value="{!A.Job_Level__c}"/>
+                <apex:column value="{!A.Job_Description__c}"/>
+                <apex:column value="{!A.Type__c}"/>
+                <apex:column value="{!A.Hiring_Manager__c}"/>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

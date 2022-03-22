@@ -1,0 +1,16 @@
+/**
+ * @ Author: Aishwarya Shelke
+ * @ Create Time: 2022-03-22 16:21:07
+ * @ Modified by: Your name
+ * @ Modified time: 2022-03-22 16:26:53
+ * @ Description: //7.create a visual force page of action poller for timer based application ActionPollarVF
+
+ */
+
+
+<apex:page controller="ActionPollarVF">
+    <apex:form >
+        <apex:outputText value="Watch this counter: {!count}" id="counter"/>
+        <apex:actionPoller action="{!incrementCounter}" reRender="counter" interval="5"/>
+    </apex:form>
+</apex:page>
