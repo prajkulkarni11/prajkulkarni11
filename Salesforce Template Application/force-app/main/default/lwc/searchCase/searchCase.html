@@ -1,0 +1,32 @@
+<!--
+Filename: e:\LWC ass Pooja mam\DemoProject\force-app\main\default\lwc\searchCase\searchCase.html
+Path: e:\LWC ass Pooja mam\DemoProject
+Created Date: Wednesday, March 16th 2022, 12:19:41 pm
+Author: snehal@vyomlabs.com
+
+Copyright (c) 2022 Your Company
+-->
+<template>
+    <lightning-card title="Case Records">
+        <lightning-input
+            name="search Case"
+            label="Search Case records"
+            type="search" onchange={handleSearchKey} value ={searchKey}
+        ></lightning-input>
+        <lightning-button variant="base" label="Get Case" title="Case Details" onclick={handleSearch} class="slds-m-left_x-small">
+    </lightning-button>
+        <template if:true={case_rec}>
+            <template for:each={case_rec} for:item="c">
+                <p key={c.id}>
+                    {c.CaseNumber}
+                    {c.CloseDate}
+                    {c.Origin}
+                    {c.Subject}
+                    {c.Description}
+                    {c.CreatedDate}
+                    {c.Status}
+                </p>
+            </template>
+</template>
+</lightning-card>
+</template>
