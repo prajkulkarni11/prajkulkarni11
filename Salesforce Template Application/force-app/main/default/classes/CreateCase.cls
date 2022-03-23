@@ -1,12 +1,15 @@
 
 /**
- * @description       : Apex Assignment
- * @author            : Swapnil Thalal
- * @group             : 
- * @last modified on  : 02-03-22
- * @last modified by  : Swapnil Thalal
-**/
+ * @File Name          : CreateCase.cls
+ * @Description        : Collection Assignment 7) Create lightning component to achieve below requirement (License Application)
 
+ * @Author             : Swapnil Thalal
+ * @Group              : 
+ * @Last Modified By   : Swapnil Thalal
+ * @Last Modified On   : 22/03/2022, 7:40:39 pm
+ * @Modification Log   : 
+ 
+**/
 public with sharing class CreateCase {
     public CreateCase() {
 
