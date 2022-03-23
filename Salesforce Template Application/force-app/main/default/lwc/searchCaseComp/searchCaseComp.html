@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Display Cases with imperative" >
+
+        <lightning-input type="search" onchange={handleKeyChange} label="search" value={searchKey}></lightning-input>
+        <lightning-button label="Search" onclick={handleSearch}></lightning-button>
+
+        <template if:true={cases}>
+            <template for:each={cases} for:item="caseshow">
+
+                <p key={caseshow.Id}>{caseshow.Subject},
+                   {caseshow.CaseNumber},
+                   {caseshow.Description},
+                    {caseshow.ClosedDate},
+                    {caseshow.CreatedDate},
+                    {caseshow.Status}
+                    
+                </p>
+
+
+            </template>
+        </template> 
+
+        <template if:true={error}>
+            'this is not a proper search key'
+            {error.data}
+        </template>
+    
+
+
+
+
+
+    </lightning-card>
+    
+</template>
