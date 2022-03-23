@@ -1,15 +1,15 @@
 /**
-
  * @File Name          : CurrencyConverterController.cls
- * @Description        : Rest Api Assignment 01:create apex class to make external api call to exchangeratesapi
+ * @Description        : Collection Assignment10Create currency convert LWC component by make callout for conversion rate.
+Please find below example to design the LWC Component.
+
  * @Author             : Swapnil Thalal
  * @Group              : 
  * @Last Modified By   : Swapnil Thalal
- * @Last Modified On   : 07/03/2022, 2:40:39 pm
-* @Modification Log   : 
-
- **/
-
+ * @Last Modified On   : 23/03/2022, 9:40:39 am
+ * @Modification Log   : 
+ 
+**/
 public with sharing class CurrencyConverterController {
    
     @AuraEnabled(cacheable=true)

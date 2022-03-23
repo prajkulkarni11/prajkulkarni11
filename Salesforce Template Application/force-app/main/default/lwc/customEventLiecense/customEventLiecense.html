@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="License Detail Form">
+        
+       
+        <lightning-record-edit-form object-api-name="License_Detail__c" 
+        onsubmit={handleSubmit} onsuccess={handleSuccess}>
+           <lightning-input-field field-name="Name" value={nametype}></lightning-input-field>
+            <lightning-input-field field-name="FirstName__c" value={firstname}></lightning-input-field>
+            <lightning-input-field field-name="LastName__c" value={lastname}></lightning-input-field>
+            <lightning-input-field field-name="Phone_Number__c" value={phone}></lightning-input-field>
+            <lightning-input-field field-name="Email__c" value={email}></lightning-input-field>
+            <lightning-input-field field-name="Passport_Number__c" value={passport}></lightning-input-field>
+            <lightning-input-field field-name="Address__c" value={address}></lightning-input-field>
+            <lightning-input-field field-name="Passport_Expiry_Date__c" value={Passport_Expiry}></lightning-input-field>
+            <lightning-input-field field-name="Visa_Expirty_Date__c" value={Visa_Expirty}></lightning-input-field>
+            <lightning-input-field field-name="Visa_Number__c" value={Visa_Number}></lightning-input-field>
+            <lightning-file-upload
+            label="Upload single/multiple files"
+            name="fileUploader"
+            accept={acceptedFormats}
+            record-id={recordId}
+            onuploadfinished={handleUploadFinished}
+            multiple>
+    </lightning-file-upload>
+            <lightning-button
+            class="slds-m-top_small"
+           
+            type="submit"
+            
+            label="Submit">
+        </lightning-button>
+
+        </lightning-record-edit-form>
+
+        
+    </lightning-card>
+</template>
