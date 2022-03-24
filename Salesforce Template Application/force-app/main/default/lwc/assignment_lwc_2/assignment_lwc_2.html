@@ -1,0 +1,20 @@
+<!--
+Filename: d:\New folder\TEST\Apex Assignment\Apex-Assignments\Salesforce Template Application\force-app\main\default\lwc\assignment_lwc_2\assignment_lwc_2.html
+Path: d:\New folder\TEST\Apex Assignment\Apex-Assignments\Salesforce Template Application
+Created Date: Wednesday, March 23rd 2022, 9:48:46 pm
+Author: biswajeet
+
+Copyright (c) 2022 Your Company
+-->
+
+<template>
+    <lightning-file-upload
+        label="Upload"
+        name="uploadfiles"
+        accept={acceptedFormats}
+        record-id={myRecordId}
+        onuploadfinished={handleUploadFinished}
+        multiple="true"
+    >
+    </lightning-file-upload>
+</template>
