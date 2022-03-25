@@ -1,0 +1,18 @@
+<template>
+	<lightning-card title="Reset Input Field" icon-name="custom:custom63">
+		<div class="slds-var-m-around_medium">
+			<lightning-input type="text" label="First Name" data-id="reset"></lightning-input>
+			<lightning-input type="text" label="Middle Name" data-id="reset"></lightning-input>
+			<lightning-input type="text" label="Last Name" data-id="reset"></lightning-input>
+			<lightning-input type="text" label="City" data-name="city"></lightning-input>
+			<lightning-input type="text" label="Country"></lightning-input>
+			<lightning-input type="checkbox" label="Active" data-name="active"></lightning-input>
+		</div>
+		<div class="slds-var-m-around_medium">
+			<lightning-button label="Reset All" onclick={handleResetAll}></lightning-button>
+			<lightning-button label="Reset City Field" onclick={handleResetCityField}></lightning-button>
+			<lightning-button label="Reset using data-id" data-id="reset" onclick={handleResetUsingDataId}></lightning-button>
+			<lightning-button label="Reset Checkbox" data-id="reset" onclick={handleResetCheckbox}></lightning-button>
+		</div>
+	</lightning-card>
+</template>
